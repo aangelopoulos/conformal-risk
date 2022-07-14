@@ -74,13 +74,15 @@ def run_trials(scores, losses, alpha, num_trials, num_calibration=3000, max_lamb
 
     results = []
     all_risk = []
+    all_lhat = []
     for i in tqdm.tqdm(range(num_trials), desc="Running trials"):
         lhat, risk, size = compute_trial(loss_table, size_table, lambdas, alpha, num_calibration)
         results.append(pd.DataFrame(dict(risk=risk, size=size, alpha=alpha), index=[i]))
         all_risk.append(risk)
+        all_lhat.append(lhat)
     df = pd.concat(results, axis=0, ignore_index=True)
     print("Average risk across trials = %2.3f" % np.mean(all_risk))
-
+    print("Average threshold across trials = %2.3f" % np.mean(all_lhat))
     return df
 
 
