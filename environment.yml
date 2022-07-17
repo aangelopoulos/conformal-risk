@@ -1,4 +1,4 @@
-name: generalized-conformal 
+name: conformal-risk 
 channels:
     - anaconda
     - conda-forge
