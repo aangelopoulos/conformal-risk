@@ -105,7 +105,7 @@ def plot_histograms(df,alpha):
     os.makedirs('../outputs/histograms/', exist_ok=True)
     plt.savefig('../' + (f'outputs/histograms/{alpha}_coco_histograms').replace('.','_') + '.pdf')
     print(f"Average threshold: ", df["$\\hat{\\lambda}$"].mean())
-
+    print(f"The mean and standard deviation of the risk over {len(df)} trials are {df['risk'].mean()} and {df['risk'].std()} respectively.")
 
 def experiment(alpha,num_lam,num_calib,lambdas_example_table,num_trials,batch_size,coco_val_2017_directory,coco_instances_val_2017_json):
     fname = f'../.cache/{alpha}_{num_calib}_{num_lam}_{num_trials}_dataframe.pkl'

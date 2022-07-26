@@ -149,7 +149,7 @@ def gridplot_imgs_tree(imgs,est_labels,labels,rows,cols):
 
     plt.tight_layout()
     plt.subplots_adjust(wspace=0.05,hspace=0.05)
-    plt.savefig('./outputs/hierarchical_grid_fig.pdf')
+    plt.savefig('./outputs/hierarchical_grid_fig.pdf', dpi=7)
 
 if __name__ == "__main__":
     sns.set(palette='pastel',font='serif')

@@ -99,7 +99,7 @@ def gridplot_imgs(imgs,est_labels,labels,rows,cols):
     plt.tight_layout()
     plt.subplots_adjust(wspace=0.05,hspace=0.05)
     os.makedirs('../outputs/', exist_ok=True)
-    plt.savefig('../outputs/grid_fig.pdf')
+    plt.savefig('../outputs/coco_grid_fig.pdf', dpi=10)
 
 if __name__ == "__main__":
     with torch.no_grad():

@@ -62,7 +62,7 @@ def plot_histograms(df, alpha, output_dir):
     axs[0].hist(df['risk'].to_numpy(), alpha=0.7, density=True)
 
     normalized_size = df['sizes'].to_numpy()
-    axs[1].hist(normalized_size, alpha=0.7, density=True)
+    axs[1].hist(normalized_size, bins=60, alpha=0.7, density=True)
 
     axs[0].set_xlabel('risk')
     axs[0].locator_params(axis='x', nbins=10)
@@ -76,6 +76,7 @@ def plot_histograms(df, alpha, output_dir):
     sns.despine(top=True, right=True, ax=axs[1])
     plt.tight_layout()
     plt.savefig( output_dir + (f'{alpha}_polyp_histograms').replace('.','_') + '.pdf'  )
+    print(f"The mean and standard deviation of the risk over {len(df)} trials are {df['risk'].mean()} and {df['risk'].std()} respectively.")
 
 def experiment(alpha, num_trials, num_calib, num_lam, output_dir, lambdas_example_table):
     img_names, sigmoids, masks, regions, num_components = get_data(cache_path)

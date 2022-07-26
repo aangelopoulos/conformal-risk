@@ -108,6 +108,7 @@ def plot_histograms(df,alpha):
     plt.tight_layout()
     os.makedirs('outputs/histograms/',exist_ok=True)
     plt.savefig( (f'outputs/histograms/{alpha}_{num_calib}_hierarchical_imagenet_histograms').replace('.','_') + '.pdf')
+    print(f"The mean and standard deviation of the risk over {len(df)} trials are {df['risk'].mean()} and {df['risk'].std()} respectively.")
 
 def load_imagenet_tree():
     with open('./wordnet_hierarchy.json', 'r') as file:

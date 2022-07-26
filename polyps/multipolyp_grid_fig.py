@@ -31,7 +31,7 @@ def plot_grid(list_img_list, list_result_list, output_dir):
             axs[2*i+1,j].axis('off')
             axs[2*i+1,j].imshow(list_result_list[i][j], aspect='equal')
     plt.tight_layout()
-    plt.savefig(output_dir + 'multipolyp_grid_fig.pdf')
+    plt.savefig(output_dir + 'multipolyp_grid_fig.pdf', dpi=10)
 
 def get_results(lhat, nc_list, val_img_names, val_scores, val_masks, val_num_components, num_plot):
     list_img_list = list()
@@ -88,7 +88,7 @@ if __name__ == '__main__':
         fix_randomness(seed=5)
 
         cache_path = './.cache/'
-        output_dir = 'outputs/grid_fig/'
+        output_dir = 'outputs/'
         pathlib.Path(cache_path).mkdir(parents=True, exist_ok=True)
         pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
 

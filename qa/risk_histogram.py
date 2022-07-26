@@ -112,6 +112,7 @@ def plot_histograms(df, alpha, output_dir):
     sns.despine(top=True, right=True, ax=axs[1])
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, f"{alpha}_qa_histograms.pdf"))
+    print(f"The mean and standard deviation of the risk over {len(df)} trials are {df['risk'].mean()} and {df['risk'].std()} respectively.")
 
 
 def main(args):
