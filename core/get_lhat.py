@@ -1,6 +1,5 @@
 import numpy as np
 from scipy.optimize import brentq
-import pdb
 
 """
     Gets the value of lambda hat that controls the marginal risk for a monotone risk function.
