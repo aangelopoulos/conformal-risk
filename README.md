@@ -12,3 +12,17 @@ The conformal risk control algorithm is in `core/get_lhat.py`. It is 5 lines lon
 ## Examples
 Each of the `{polyps, coco, hierarchical-imagenet, qa}` folders contains a worked example of conformal risk control with a different risk function.
 `polyps` does gut polyp segmentation with false negative rate control. `coco` does multi-label classification with false negative rate control. `hierarchical-imagenet` does hierarchical classification and chooses the resolution of its prediction by bounding the graph distance to an ancestor of the true label. Finally, `qa` controls the F1-score in open-world question answering.
+
+### Setup
+For the computer vision experiments, run
+```
+  conda env create -f environment.yml
+  conda activate conformal-risk
+```
+This will install all dependencies for the vision experiments.
+
+For the question-answering task, follow the instructions in `qa/README.md`.
+
+### Reproducing the experiments
+After setting up the environment, enter the example folder and run the appropriate `risk_histogram.py` file.
+To produce the grids of images in the paper, run the python file containing the word `grid` in each folder.
