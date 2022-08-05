@@ -1,5 +1,14 @@
 # Conformal Risk Control
-This is the official repository of <i>Conformal Risk Control</i> by Anastasios N. Angelopoulos, Stephen Bates, Adam Fisch, Lihua Lei, and Tal Schuster.
+This is the official repository of [Conformal Risk Control](http://arxiv.org/abs/2208.02814) by Anastasios N. Angelopoulos, Stephen Bates, Adam Fisch, Lihua Lei, and Tal Schuster.
+
+<p align="center">
+    <a style="text-decoration:none !important;" href="http://arxiv.org/abs/2208.02814" alt="arXiv"> <img src="https://img.shields.io/badge/paper-arXiv-red" /> </a>
+    <a style="text-decoration:none !important;" href="https://people.eecs.berkeley.edu/%7Eangelopoulos/" alt="website"> <img src="https://img.shields.io/badge/website-Berkeley-yellow" /> </a>
+    <a style="text-decoration:none !important;" href="https://docs.conda.io/en/latest/miniconda.html" alt="package management"> <img src="https://img.shields.io/badge/conda-env-green" /> </a>
+    <a style="text-decoration:none !important;" href="https://opensource.org/licenses/MIT" alt="License"> <img src="https://img.shields.io/badge/license-MIT-blue.svg" /> </a>
+    <a style="text-decoration:none !important;" href="https://twitter.com/ml_angelopoulos?ref_src=twsrc%5Etfw" alt="package management"> <img src="https://img.shields.io/twitter/follow/ml_angelopoulos?style=social" /> </a>
+
+</p>
 
 ## Technical background
 In the risk control problem, we are given some loss function $L_i(\lambda) = \ell(X_i,Y_i,\lambda)$.
@@ -26,3 +35,15 @@ For the question-answering task, follow the instructions in `qa/README.md`.
 ### Reproducing the experiments
 After setting up the environment, enter the example folder and run the appropriate `risk_histogram.py` file.
 To produce the grids of images in the paper, run the python file containing the word `grid` in each folder.
+
+### Citation 
+
+```
+@article{angelopoulos2022conformal,
+  title={Conformal Risk Control},
+  author={Angelopoulos, Anastasios N and Bates, Stephen and Fisch, Adam and Lei, Lihua and Schuster, Tal},
+  journal={arXiv preprint arXiv:2208.02814},
+  year={2022}
+}
+```
+
